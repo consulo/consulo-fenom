@@ -1,8 +1,10 @@
 package ru.klkvsk.fenom.file;
 
-import com.intellij.openapi.util.IconLoader;
-import javax.swing.*;
+import javax.swing.Icon;
 
-public class FenomIcons {
-    public static final Icon FILE = IconLoader.getIcon("/ru/klkvsk/fenom/file/filetype-icon.png");
+import com.intellij.openapi.util.IconLoader;
+
+public class FenomIcons
+{
+	public static final Icon FILE = IconLoader.getIcon("/ru/klkvsk/fenom/file/filetype-icon.png");
 }

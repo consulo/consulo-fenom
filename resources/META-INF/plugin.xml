@@ -1,0 +1,14 @@
+<idea-plugin>
+	<id>ru.klkvsk.fenom</id>
+	<name>Fenom template engine</name>
+	<version>SNAPSHOR</version>
+	<depends>com.intellij.xml</depends>
+	<vendor email="m@klkvsk.ru">Mikhail Kulakovskiy</vendor>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<fileTypeFactory implementation="ru.klkvsk.fenom.file.FenomFileTypeFactory"/>
+		<lang.parserDefinition language="FENOM" implementationClass="ru.klkvsk.fenom.parser.FenomParserDefinition"/>
+		<lang.fileViewProviderFactory language="FENOM" implementationClass="ru.klkvsk.fenom.file.FenomFileViewProviderFactory"/>
+		<colorSettingsPage implementation="ru.klkvsk.fenom.editor.FenomColorSettingsPage"/>
+	</extensions>
+</idea-plugin>

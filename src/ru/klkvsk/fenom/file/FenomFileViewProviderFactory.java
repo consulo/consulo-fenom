@@ -7,9 +7,11 @@ import com.intellij.psi.FileViewProviderFactory;
 import com.intellij.psi.PsiManager;
 
 
-public class FenomFileViewProviderFactory implements FileViewProviderFactory {
-    @Override
-    public FileViewProvider createFileViewProvider(VirtualFile virtualFile, Language language, PsiManager psiManager, boolean physical) {
-        return new FenomFileViewProvider(psiManager, virtualFile, physical);
-    }
+public class FenomFileViewProviderFactory implements FileViewProviderFactory
+{
+	@Override
+	public FileViewProvider createFileViewProvider(VirtualFile virtualFile, Language language, PsiManager psiManager, boolean physical)
+	{
+		return new FenomFileViewProvider(psiManager, virtualFile, physical);
+	}
 }
