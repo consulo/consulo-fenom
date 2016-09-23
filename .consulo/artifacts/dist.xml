@@ -2,7 +2,7 @@
   <artifact name="dist">
     <output-path>$PROJECT_DIR$/out/artifacts/dist</output-path>
     <root id="root">
-      <element id="directory" name="fenom">
+      <element id="directory" name="ru.klkvsk.fenom">
         <element id="directory" name="lib">
           <element id="zip-archive" name="fenom.jar">
             <element id="module-production-resource-output" name="consulo-fenom" />

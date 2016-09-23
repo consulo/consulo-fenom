@@ -1,7 +1,7 @@
 <idea-plugin>
 	<id>ru.klkvsk.fenom</id>
 	<name>Fenom template engine</name>
-	<version>SNAPSHOR</version>
+	<version>SNAPSHOT</version>
 	<depends>com.intellij.xml</depends>
 	<vendor email="m@klkvsk.ru">Mikhail Kulakovskiy</vendor>
 

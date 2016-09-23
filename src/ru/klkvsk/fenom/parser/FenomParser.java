@@ -3,11 +3,11 @@ package ru.klkvsk.fenom.parser;
 
 import org.jetbrains.annotations.NotNull;
 import com.intellij.lang.ASTNode;
-import com.intellij.lang.LanguageVersion;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
 import com.intellij.lang.PsiParser;
 import com.intellij.psi.tree.IElementType;
+import consulo.lang.LanguageVersion;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
 public class FenomParser implements PsiParser
