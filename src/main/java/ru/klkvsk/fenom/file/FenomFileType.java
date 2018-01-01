@@ -36,7 +36,7 @@ public class FenomFileType extends LanguageFileType
 
 	@NotNull
 	@Override
-	public String getName()
+	public String getId()
 	{
 		return "Fenom template";
 	}
