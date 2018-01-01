@@ -1,5 +1,4 @@
-/idea-flex.skeleton
-/JFlex.jar
-out
-/.consulo/workspace.xml
-/dep
+/.consulo
+!/.consulo/codeStyleSettings.xml
+/out
+/target
