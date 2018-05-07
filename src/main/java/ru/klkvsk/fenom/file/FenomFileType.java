@@ -12,6 +12,7 @@ import com.intellij.openapi.fileTypes.FileTypeEditorHighlighterProviders;
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
+import consulo.ui.image.Image;
 import ru.klkvsk.fenom.FenomLanguage;
 import ru.klkvsk.fenom.editor.FenomTemplateHighlighter;
 
@@ -57,7 +58,7 @@ public class FenomFileType extends LanguageFileType
 
 	@Nullable
 	@Override
-	public Icon getIcon()
+	public Image getIcon()
 	{
 		return FenomIcons.FILE;
 	}
