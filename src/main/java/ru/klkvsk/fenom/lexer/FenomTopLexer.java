@@ -1,8 +1,5 @@
 package ru.klkvsk.fenom.lexer;
 
-import java.io.Reader;
-
-import com.intellij.lexer.FlexAdapter;
 import com.intellij.lexer.Lexer;
 import com.intellij.lexer.LookAheadLexer;
 import com.intellij.lexer.MergingLexerAdapter;
@@ -18,7 +15,7 @@ public class FenomTopLexer extends MergingLexerAdapter
 
 	public FenomTopLexer()
 	{
-		super(new LookAheadLexer(new FlexAdapter(new FenomTopFlexLexer((Reader) null)))
+		super(new LookAheadLexer(new FenomTopFlexLexer())
 		{
 
 			@Override

@@ -1,6 +1,6 @@
 package ru.klkvsk.fenom.lexer;
 
-import com.intellij.lexer.FlexLexer;
+import com.intellij.lexer.LexerBase;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.util.containers.Stack;
 import static ru.klkvsk.fenom.psi.FenomTypes.*;
@@ -8,9 +8,9 @@ import static ru.klkvsk.fenom.psi.FenomTypes.*;
 %%
 
 %class FenomSubFlexLexer
-%implements FlexLexer
+%extends LexerBase
 %unicode
-%function advance
+%function advanceImpl
 %type IElementType
 %caseless
 %eof{  return;
