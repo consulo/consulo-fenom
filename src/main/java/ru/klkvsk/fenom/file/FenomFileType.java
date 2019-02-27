@@ -22,16 +22,6 @@ public class FenomFileType extends LanguageFileType
 	private FenomFileType()
 	{
 		super(FenomLanguage.INSTANCE);
-
-		// register highlighter - lazy singleton factory
-		FileTypeEditorHighlighterProviders.INSTANCE.addExplicitExtension(this, new EditorHighlighterProvider()
-		{
-			public EditorHighlighter getEditorHighlighter(@Nullable Project project, @Nonnull FileType fileType, @Nullable VirtualFile virtualFile,
-														  @Nonnull EditorColorsScheme editorColorsScheme)
-			{
-				return new FenomTemplateHighlighter(project, virtualFile, editorColorsScheme);
-			}
-		});
 	}
 
 	@Nonnull
