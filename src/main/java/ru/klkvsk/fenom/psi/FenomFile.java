@@ -1,12 +1,12 @@
 package ru.klkvsk.fenom.psi;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.psi.impl.PsiFileEx;
 
 public interface FenomFile extends PsiFileEx
 {
-	@NotNull
+	@Nonnull
 	@Override
 	FileType getFileType();
 }

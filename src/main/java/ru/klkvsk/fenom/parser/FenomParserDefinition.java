@@ -1,6 +1,7 @@
 package ru.klkvsk.fenom.parser;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
+
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.ParserDefinition;
 import com.intellij.lang.PsiParser;
@@ -21,15 +22,15 @@ import ru.klkvsk.fenom.psi.impl.FenomPsiElement;
 
 public class FenomParserDefinition implements ParserDefinition
 {
-	@NotNull
+	@Nonnull
 	@Override
-	public Lexer createLexer(@NotNull LanguageVersion languageVersion)
+	public Lexer createLexer(@Nonnull LanguageVersion languageVersion)
 	{
 		return new FenomLexer();
 	}
 
 	@Override
-	public PsiParser createParser(@NotNull LanguageVersion languageVersion)
+	public PsiParser createParser(@Nonnull LanguageVersion languageVersion)
 	{
 		return new FenomParser();
 	}
@@ -40,28 +41,28 @@ public class FenomParserDefinition implements ParserDefinition
 		return FenomTypes.FILE;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
-	public TokenSet getWhitespaceTokens(@NotNull LanguageVersion languageVersion)
+	public TokenSet getWhitespaceTokens(@Nonnull LanguageVersion languageVersion)
 	{
 		return FenomTypes.WHITESPACES;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
-	public TokenSet getCommentTokens(@NotNull LanguageVersion languageVersion)
+	public TokenSet getCommentTokens(@Nonnull LanguageVersion languageVersion)
 	{
 		return FenomTypes.COMMENTS;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
-	public TokenSet getStringLiteralElements(@NotNull LanguageVersion languageVersion)
+	public TokenSet getStringLiteralElements(@Nonnull LanguageVersion languageVersion)
 	{
 		return FenomTypes.STRING_LITERALS;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public PsiElement createElement(ASTNode node)
 	{

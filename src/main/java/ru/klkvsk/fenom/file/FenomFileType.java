@@ -1,9 +1,8 @@
 package ru.klkvsk.fenom.file;
 
-import javax.swing.Icon;
+import javax.annotation.Nonnull;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import javax.annotation.Nullable;
 import com.intellij.openapi.editor.colors.EditorColorsScheme;
 import com.intellij.openapi.editor.highlighter.EditorHighlighter;
 import com.intellij.openapi.fileTypes.EditorHighlighterProvider;
@@ -27,29 +26,29 @@ public class FenomFileType extends LanguageFileType
 		// register highlighter - lazy singleton factory
 		FileTypeEditorHighlighterProviders.INSTANCE.addExplicitExtension(this, new EditorHighlighterProvider()
 		{
-			public EditorHighlighter getEditorHighlighter(@Nullable Project project, @NotNull FileType fileType, @Nullable VirtualFile virtualFile,
-					@NotNull EditorColorsScheme editorColorsScheme)
+			public EditorHighlighter getEditorHighlighter(@Nullable Project project, @Nonnull FileType fileType, @Nullable VirtualFile virtualFile,
+														  @Nonnull EditorColorsScheme editorColorsScheme)
 			{
 				return new FenomTemplateHighlighter(project, virtualFile, editorColorsScheme);
 			}
 		});
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public String getId()
 	{
 		return "Fenom template";
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public String getDescription()
 	{
 		return "Fenom template";
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public String getDefaultExtension()
 	{

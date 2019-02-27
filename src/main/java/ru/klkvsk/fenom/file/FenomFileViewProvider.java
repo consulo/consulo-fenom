@@ -5,7 +5,8 @@ import gnu.trove.THashSet;
 import java.util.Arrays;
 import java.util.Set;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
+
 import com.intellij.lang.Language;
 import com.intellij.lang.LanguageParserDefinitions;
 import com.intellij.lang.html.HTMLLanguage;
@@ -60,21 +61,21 @@ public class FenomFileViewProvider extends MultiplePsiFilesPerDocumentFileViewPr
 	}
 
 
-	@NotNull
+	@Nonnull
 	@Override
 	public Language getBaseLanguage()
 	{
 		return FenomLanguage.INSTANCE;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public Language getTemplateDataLanguage()
 	{
 		return myTemplateDataLanguage;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public Set<Language> getLanguages()
 	{

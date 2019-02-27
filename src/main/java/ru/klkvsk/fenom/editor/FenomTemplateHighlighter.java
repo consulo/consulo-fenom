@@ -1,7 +1,7 @@
 package ru.klkvsk.fenom.editor;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import com.intellij.ide.highlighter.HtmlFileType;
 import com.intellij.lang.Language;
 import com.intellij.openapi.editor.colors.EditorColorsScheme;
@@ -21,7 +21,7 @@ import ru.klkvsk.fenom.psi.FenomTypes;
  */
 public class FenomTemplateHighlighter extends LayeredLexerEditorHighlighter
 {
-	public FenomTemplateHighlighter(@Nullable Project project, @Nullable VirtualFile virtualFile, @NotNull EditorColorsScheme colors)
+	public FenomTemplateHighlighter(@Nullable Project project, @Nullable VirtualFile virtualFile, @Nonnull EditorColorsScheme colors)
 	{
 		// create main highlighter
 		super(new FenomSyntaxHighlighter(), colors);

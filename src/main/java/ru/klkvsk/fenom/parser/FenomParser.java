@@ -1,7 +1,8 @@
 // This is a generated file. Not intended for manual editing.
 package ru.klkvsk.fenom.parser;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
+
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
@@ -12,7 +13,7 @@ import ru.klkvsk.fenom.psi.FenomTypes;
 
 public class FenomParser implements PsiParser
 {
-	@NotNull
+	@Nonnull
 	@Override
 	public ASTNode parse(IElementType root, PsiBuilder builder, LanguageVersion languageVersion)
 	{

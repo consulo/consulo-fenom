@@ -1,14 +1,14 @@
 package ru.klkvsk.fenom.psi;
 
 import org.jetbrains.annotations.NonNls;
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 import com.intellij.psi.tree.IElementType;
 import ru.klkvsk.fenom.FenomLanguage;
 
 public class FenomTokenType extends IElementType
 {
 
-	public FenomTokenType(@NotNull @NonNls String debugName)
+	public FenomTokenType(@Nonnull @NonNls String debugName)
 	{
 		super(debugName, FenomLanguage.INSTANCE);
 	}

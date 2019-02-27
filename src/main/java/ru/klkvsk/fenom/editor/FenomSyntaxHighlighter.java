@@ -3,7 +3,8 @@ package ru.klkvsk.fenom.editor;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
+
 import com.intellij.lexer.Lexer;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
@@ -45,14 +46,14 @@ public class FenomSyntaxHighlighter extends SyntaxHighlighterBase implements Fen
 	}
 
 
-	@NotNull
+	@Nonnull
 	@Override
 	public Lexer getHighlightingLexer()
 	{
 		return new FenomLexer();
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public TextAttributesKey[] getTokenHighlights(IElementType type)
 	{

@@ -4,7 +4,7 @@ import java.util.Map;
 
 import javax.swing.Icon;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
 import com.intellij.openapi.options.colors.AttributesDescriptor;
@@ -23,7 +23,7 @@ public class FenomColorSettingsPage implements ColorSettingsPage
 			new AttributesDescriptor("Bad characters", FenomSyntaxHighlighterKeys.BAD_CHARACTER),
 	};
 
-	@NotNull
+	@Nonnull
 	@Override
 	public String getDisplayName()
 	{
@@ -36,28 +36,28 @@ public class FenomColorSettingsPage implements ColorSettingsPage
 		return null;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public AttributesDescriptor[] getAttributeDescriptors()
 	{
 		return ATTRS;
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public ColorDescriptor[] getColorDescriptors()
 	{
 		return new ColorDescriptor[0];
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public SyntaxHighlighter getHighlighter()
 	{
 		return new FenomSyntaxHighlighter();
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public String getDemoText()
 	{

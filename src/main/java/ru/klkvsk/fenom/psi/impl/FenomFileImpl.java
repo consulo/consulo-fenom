@@ -1,6 +1,6 @@
 package ru.klkvsk.fenom.psi.impl;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 import com.intellij.extapi.psi.PsiFileBase;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.psi.FileViewProvider;
@@ -15,7 +15,7 @@ public class FenomFileImpl extends PsiFileBase implements FenomFile
 		super(viewProvider, FenomLanguage.INSTANCE);
 	}
 
-	@NotNull
+	@Nonnull
 	@Override
 	public FileType getFileType()
 	{
