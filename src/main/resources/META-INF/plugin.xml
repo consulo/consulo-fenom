@@ -1,4 +1,4 @@
-<idea-plugin>
+<consulo-plugin>
 	<id>ru.klkvsk.fenom</id>
 	<name>Fenom template engine</name>
 	<version>SNAPSHOT</version>
@@ -12,4 +12,4 @@
 		<colorSettingsPage implementation="ru.klkvsk.fenom.editor.FenomColorSettingsPage"/>
 		<editorHighlighterProvider filetype="FENOM" implementationClass="ru.klkvsk.fenom.file.FenomEditorHighlighterProvider" />
 	</extensions>
-</idea-plugin>
+</consulo-plugin>
