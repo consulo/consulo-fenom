@@ -1,12 +1,5 @@
 package ru.klkvsk.fenom.file;
 
-import gnu.trove.THashSet;
-
-import java.util.Arrays;
-import java.util.Set;
-
-import javax.annotation.Nonnull;
-
 import com.intellij.lang.Language;
 import com.intellij.lang.LanguageParserDefinitions;
 import com.intellij.lang.html.HTMLLanguage;
@@ -22,6 +15,9 @@ import com.intellij.psi.templateLanguages.TemplateLanguage;
 import com.intellij.psi.templateLanguages.TemplateLanguageFileViewProvider;
 import ru.klkvsk.fenom.FenomLanguage;
 import ru.klkvsk.fenom.psi.FenomTypes;
+
+import javax.annotation.Nonnull;
+import java.util.Set;
 
 
 public class FenomFileViewProvider extends MultiplePsiFilesPerDocumentFileViewProvider implements TemplateLanguageFileViewProvider
@@ -79,10 +75,7 @@ public class FenomFileViewProvider extends MultiplePsiFilesPerDocumentFileViewPr
 	@Override
 	public Set<Language> getLanguages()
 	{
-		return new THashSet<Language>(Arrays.asList(new Language[]{
-				FenomLanguage.INSTANCE,
-				myTemplateDataLanguage
-		}));
+		return Set.of(FenomLanguage.INSTANCE, myTemplateDataLanguage);
 	}
 
 	@Override
