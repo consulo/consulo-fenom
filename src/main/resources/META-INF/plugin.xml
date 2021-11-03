@@ -4,6 +4,10 @@
 	<version>SNAPSHOT</version>
 	<depends>com.intellij.xml</depends>
 	<vendor email="m@klkvsk.ru">Mikhail Kulakovskiy</vendor>
+	<category>Template Languages</category>
+	<tags>
+		<tag>template.language</tag>
+	</tags>
 
 	<extensions defaultExtensionNs="com.intellij">
 		<fileTypeFactory implementation="ru.klkvsk.fenom.file.FenomFileTypeFactory"/>
