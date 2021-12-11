@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import consulo.fenom.icon.FenomIconGroup;
+import consulo.localize.LocalizeValue;
 import consulo.ui.image.Image;
 import ru.klkvsk.fenom.FenomLanguage;
 
@@ -27,9 +28,9 @@ public class FenomFileType extends LanguageFileType
 
 	@Nonnull
 	@Override
-	public String getDescription()
+	public LocalizeValue getDescription()
 	{
-		return "Fenom template";
+		return LocalizeValue.localizeTODO("Fenom template");
 	}
 
 	@Nonnull
