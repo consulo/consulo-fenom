@@ -1,8 +1,8 @@
 package ru.klkvsk.fenom.psi;
 
-import javax.annotation.Nonnull;
-import com.intellij.openapi.fileTypes.FileType;
-import com.intellij.psi.impl.PsiFileEx;
+import consulo.virtualFileSystem.fileType.FileType;
+import consulo.language.psi.PsiFileEx;
+import jakarta.annotation.Nonnull;
 
 public interface FenomFile extends PsiFileEx
 {

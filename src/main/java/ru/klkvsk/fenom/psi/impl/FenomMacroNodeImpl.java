@@ -1,7 +1,7 @@
 package ru.klkvsk.fenom.psi.impl;
 
-import com.intellij.lang.ASTNode;
-import com.intellij.psi.PsiElement;
+import consulo.language.psi.PsiElement;
+import consulo.language.ast.ASTNode;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
 /**

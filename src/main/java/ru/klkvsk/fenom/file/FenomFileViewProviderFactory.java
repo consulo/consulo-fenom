@@ -1,17 +1,28 @@
 package ru.klkvsk.fenom.file;
 
-import com.intellij.lang.Language;
-import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.psi.FileViewProvider;
-import com.intellij.psi.FileViewProviderFactory;
-import com.intellij.psi.PsiManager;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.language.Language;
+import consulo.language.file.FileViewProvider;
+import consulo.language.file.LanguageFileViewProviderFactory;
+import consulo.language.psi.PsiManager;
+import consulo.virtualFileSystem.VirtualFile;
+import jakarta.annotation.Nonnull;
+import ru.klkvsk.fenom.FenomLanguage;
 
 
-public class FenomFileViewProviderFactory implements FileViewProviderFactory
+@ExtensionImpl
+public class FenomFileViewProviderFactory implements LanguageFileViewProviderFactory
 {
 	@Override
 	public FileViewProvider createFileViewProvider(VirtualFile virtualFile, Language language, PsiManager psiManager, boolean physical)
 	{
 		return new FenomFileViewProvider(psiManager, virtualFile, physical);
+	}
+
+	@Nonnull
+	@Override
+	public Language getLanguage()
+	{
+		return FenomLanguage.INSTANCE;
 	}
 }

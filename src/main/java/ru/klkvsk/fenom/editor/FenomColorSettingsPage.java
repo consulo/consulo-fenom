@@ -1,16 +1,16 @@
 package ru.klkvsk.fenom.editor;
 
+import consulo.annotation.component.ExtensionImpl;
+import consulo.colorScheme.TextAttributesKey;
+import consulo.colorScheme.setting.AttributesDescriptor;
+import consulo.colorScheme.setting.ColorDescriptor;
+import consulo.language.editor.colorScheme.setting.ColorSettingsPage;
+import consulo.language.editor.highlight.SyntaxHighlighter;
+import jakarta.annotation.Nonnull;
+
 import java.util.Map;
 
-import javax.swing.Icon;
-
-import javax.annotation.Nonnull;
-import com.intellij.openapi.editor.colors.TextAttributesKey;
-import com.intellij.openapi.fileTypes.SyntaxHighlighter;
-import com.intellij.openapi.options.colors.AttributesDescriptor;
-import com.intellij.openapi.options.colors.ColorDescriptor;
-import com.intellij.openapi.options.colors.ColorSettingsPage;
-
+@ExtensionImpl
 public class FenomColorSettingsPage implements ColorSettingsPage
 {
 	public static final AttributesDescriptor[] ATTRS = {
@@ -28,12 +28,6 @@ public class FenomColorSettingsPage implements ColorSettingsPage
 	public String getDisplayName()
 	{
 		return "Fenom";
-	}
-
-	@Override
-	public Icon getIcon()
-	{
-		return null;
 	}
 
 	@Nonnull

@@ -1,11 +1,11 @@
 package ru.klkvsk.fenom.file;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
-import javax.annotation.Nullable;
+import jakarta.annotation.Nullable;
 
-import com.intellij.openapi.fileTypes.LanguageFileType;
 import consulo.fenom.icon.FenomIconGroup;
+import consulo.language.file.LanguageFileType;
 import consulo.localize.LocalizeValue;
 import consulo.ui.image.Image;
 import ru.klkvsk.fenom.FenomLanguage;

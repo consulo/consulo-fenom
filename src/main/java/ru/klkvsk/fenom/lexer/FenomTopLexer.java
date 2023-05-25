@@ -1,10 +1,10 @@
 package ru.klkvsk.fenom.lexer;
 
-import com.intellij.lexer.Lexer;
-import com.intellij.lexer.LookAheadLexer;
-import com.intellij.lexer.MergingLexerAdapter;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.TokenSet;
+import consulo.language.ast.IElementType;
+import consulo.language.ast.TokenSet;
+import consulo.language.lexer.Lexer;
+import consulo.language.lexer.LookAheadLexer;
+import consulo.language.lexer.MergingLexerAdapter;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
 

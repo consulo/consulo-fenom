@@ -8,12 +8,4 @@
 	<tags>
 		<tag>template.language</tag>
 	</tags>
-
-	<extensions defaultExtensionNs="com.intellij">
-		<fileTypeFactory implementation="ru.klkvsk.fenom.file.FenomFileTypeFactory"/>
-		<lang.parserDefinition language="FENOM" implementationClass="ru.klkvsk.fenom.parser.FenomParserDefinition"/>
-		<lang.fileViewProviderFactory language="FENOM" implementationClass="ru.klkvsk.fenom.file.FenomFileViewProviderFactory"/>
-		<colorSettingsPage implementation="ru.klkvsk.fenom.editor.FenomColorSettingsPage"/>
-		<editorHighlighterProvider filetype="FENOM" implementationClass="ru.klkvsk.fenom.file.FenomEditorHighlighterProvider" />
-	</extensions>
 </consulo-plugin>

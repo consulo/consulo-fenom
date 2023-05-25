@@ -1,9 +1,8 @@
 package ru.klkvsk.fenom.editor;
 
-import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
-import com.intellij.openapi.editor.HighlighterColors;
-import com.intellij.openapi.editor.colors.TextAttributesKey;
-import ru.klkvsk.fenom.FenomLanguage;
+import consulo.codeEditor.DefaultLanguageHighlighterColors;
+import consulo.codeEditor.HighlighterColors;
+import consulo.colorScheme.TextAttributesKey;
 
 /**
  * @author VISTALL
@@ -11,22 +10,22 @@ import ru.klkvsk.fenom.FenomLanguage;
  */
 public interface FenomSyntaxHighlighterKeys
 {
-	TextAttributesKey BAD_CHARACTER = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, HighlighterColors.BAD_CHARACTER);
+	TextAttributesKey BAD_CHARACTER = TextAttributesKey.createTextAttributesKey("FENOM_BAD_CHARACTER", HighlighterColors.BAD_CHARACTER);
 
-	TextAttributesKey COMMENT = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.BLOCK_COMMENT);
+	TextAttributesKey COMMENT = TextAttributesKey.createTextAttributesKey("FENOM_COMMENT", DefaultLanguageHighlighterColors.BLOCK_COMMENT);
 
-	TextAttributesKey BRACKETS = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.BRACKETS);
+	TextAttributesKey BRACKETS = TextAttributesKey.createTextAttributesKey("FENOM_BRACKETS", DefaultLanguageHighlighterColors.BRACKETS);
 
-	TextAttributesKey IDENTIFIER = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.IDENTIFIER);
+	TextAttributesKey IDENTIFIER = TextAttributesKey.createTextAttributesKey("FENOM_IDENTIFIER", DefaultLanguageHighlighterColors.IDENTIFIER);
 
-	TextAttributesKey KEYWORD = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.KEYWORD);
+	TextAttributesKey KEYWORD = TextAttributesKey.createTextAttributesKey("FENOM_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
 
-	TextAttributesKey VARIABLE = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.INSTANCE_FIELD);
+	TextAttributesKey VARIABLE = TextAttributesKey.createTextAttributesKey("FENOM_VARIABLE", DefaultLanguageHighlighterColors.INSTANCE_FIELD);
 
-	TextAttributesKey STRING = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.STRING);
+	TextAttributesKey STRING = TextAttributesKey.createTextAttributesKey("FENOM_STRING", DefaultLanguageHighlighterColors.STRING);
 
-	TextAttributesKey COMMA = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.COMMA);
+	TextAttributesKey COMMA = TextAttributesKey.createTextAttributesKey("FENOM_COMMA", DefaultLanguageHighlighterColors.COMMA);
 
-	TextAttributesKey NUMBER = TextAttributesKey.createTextAttributesKey(FenomLanguage.INSTANCE, DefaultLanguageHighlighterColors.NUMBER);
+	TextAttributesKey NUMBER = TextAttributesKey.createTextAttributesKey("FENOM_NUMBER", DefaultLanguageHighlighterColors.NUMBER);
 
 }

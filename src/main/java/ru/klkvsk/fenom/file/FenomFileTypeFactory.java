@@ -1,9 +1,11 @@
 package ru.klkvsk.fenom.file;
 
-import javax.annotation.Nonnull;
-import com.intellij.openapi.fileTypes.FileTypeConsumer;
-import com.intellij.openapi.fileTypes.FileTypeFactory;
+import consulo.annotation.component.ExtensionImpl;
+import jakarta.annotation.Nonnull;
+import consulo.virtualFileSystem.fileType.FileTypeConsumer;
+import consulo.virtualFileSystem.fileType.FileTypeFactory;
 
+@ExtensionImpl
 public class FenomFileTypeFactory extends FileTypeFactory
 {
 	@Override

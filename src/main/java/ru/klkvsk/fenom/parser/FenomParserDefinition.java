@@ -1,18 +1,21 @@
 package ru.klkvsk.fenom.parser;
 
-import javax.annotation.Nonnull;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.language.Language;
+import jakarta.annotation.Nonnull;
 
-import com.intellij.lang.ASTNode;
-import com.intellij.lang.ParserDefinition;
-import com.intellij.lang.PsiParser;
-import com.intellij.lexer.Lexer;
-import com.intellij.psi.FileViewProvider;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.PsiFile;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.IFileElementType;
-import com.intellij.psi.tree.TokenSet;
-import consulo.lang.LanguageVersion;
+import consulo.language.ast.ASTNode;
+import consulo.language.ast.IElementType;
+import consulo.language.ast.IFileElementType;
+import consulo.language.parser.ParserDefinition;
+import consulo.language.parser.PsiParser;
+import consulo.language.lexer.Lexer;
+import consulo.language.file.FileViewProvider;
+import consulo.language.psi.PsiElement;
+import consulo.language.ast.TokenSet;
+import consulo.language.version.LanguageVersion;
+import consulo.language.psi.PsiFile;
+import ru.klkvsk.fenom.FenomLanguage;
 import ru.klkvsk.fenom.lexer.FenomLexer;
 import ru.klkvsk.fenom.psi.FenomTypes;
 import ru.klkvsk.fenom.psi.impl.FenomFileImpl;
@@ -20,8 +23,16 @@ import ru.klkvsk.fenom.psi.impl.FenomMacroAttrImpl;
 import ru.klkvsk.fenom.psi.impl.FenomMacroNodeImpl;
 import ru.klkvsk.fenom.psi.impl.FenomPsiElement;
 
+@ExtensionImpl
 public class FenomParserDefinition implements ParserDefinition
 {
+	@Nonnull
+	@Override
+	public Language getLanguage()
+	{
+		return FenomLanguage.INSTANCE;
+	}
+
 	@Nonnull
 	@Override
 	public Lexer createLexer(@Nonnull LanguageVersion languageVersion)

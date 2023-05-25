@@ -1,6 +1,6 @@
 package ru.klkvsk.fenom.lexer;
 
-import com.intellij.psi.tree.TokenSet;
+import consulo.language.ast.TokenSet;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
 public class FenomLexer extends LayeredLexer

@@ -1,7 +1,7 @@
 package ru.klkvsk.fenom.lexer;
 
-import com.intellij.lexer.MergingLexerAdapter;
-import com.intellij.psi.tree.TokenSet;
+import consulo.language.lexer.MergingLexerAdapter;
+import consulo.language.ast.TokenSet;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
 

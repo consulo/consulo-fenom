@@ -1,9 +1,9 @@
 package ru.klkvsk.fenom.psi;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
+import consulo.language.ast.IElementType;
 import org.jetbrains.annotations.NonNls;
-import com.intellij.psi.tree.IElementType;
 import ru.klkvsk.fenom.FenomLanguage;
 
 public class FenomElementType extends IElementType

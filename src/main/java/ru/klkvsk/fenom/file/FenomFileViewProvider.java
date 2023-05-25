@@ -1,22 +1,22 @@
 package ru.klkvsk.fenom.file;
 
-import com.intellij.lang.Language;
-import com.intellij.lang.LanguageParserDefinitions;
-import com.intellij.lang.html.HTMLLanguage;
-import com.intellij.openapi.fileTypes.PlainTextLanguage;
-import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.psi.LanguageSubstitutors;
-import com.intellij.psi.MultiplePsiFilesPerDocumentFileViewProvider;
-import com.intellij.psi.PsiFile;
-import com.intellij.psi.PsiManager;
-import com.intellij.psi.impl.source.PsiFileImpl;
-import com.intellij.psi.templateLanguages.TemplateDataLanguageMappings;
-import com.intellij.psi.templateLanguages.TemplateLanguage;
-import com.intellij.psi.templateLanguages.TemplateLanguageFileViewProvider;
+import consulo.language.Language;
+import consulo.language.impl.file.MultiplePsiFilesPerDocumentFileViewProvider;
+import consulo.language.impl.psi.PsiFileImpl;
+import consulo.language.parser.ParserDefinition;
+import consulo.language.plain.PlainTextLanguage;
+import consulo.language.psi.LanguageSubstitutors;
+import consulo.language.psi.PsiFile;
+import consulo.language.psi.PsiManager;
+import consulo.language.template.TemplateDataLanguageMappings;
+import consulo.language.template.TemplateLanguage;
+import consulo.language.template.TemplateLanguageFileViewProvider;
+import consulo.virtualFileSystem.VirtualFile;
+import consulo.xml.lang.html.HTMLLanguage;
 import ru.klkvsk.fenom.FenomLanguage;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 import java.util.Set;
 
 
@@ -45,7 +45,7 @@ public class FenomFileViewProvider extends MultiplePsiFilesPerDocumentFileViewPr
 		}
 		else
 		{
-			myTemplateDataLanguage = LanguageSubstitutors.INSTANCE.substituteLanguage(dataLang, file, manager.getProject());
+			myTemplateDataLanguage = LanguageSubstitutors.substituteLanguage(dataLang, file, manager.getProject());
 		}
 	}
 
@@ -91,13 +91,13 @@ public class FenomFileViewProvider extends MultiplePsiFilesPerDocumentFileViewPr
 		// creating file for main lang (HTML)
 		if(lang == myTemplateDataLanguage)
 		{
-			PsiFileImpl file = (PsiFileImpl) LanguageParserDefinitions.INSTANCE.forLanguage(lang).createFile(this);
+			PsiFileImpl file = (PsiFileImpl) ParserDefinition.forLanguage(lang).createFile(this);
 			file.setContentElementType(FenomTypes.TEMPLATE_DATA);
 			return file;
 		}
 		else if(lang == FenomLanguage.INSTANCE)
 		{
-			return LanguageParserDefinitions.INSTANCE.forLanguage(lang).createFile(this);
+			return ParserDefinition.forLanguage(lang).createFile(this);
 		}
 		else
 		{

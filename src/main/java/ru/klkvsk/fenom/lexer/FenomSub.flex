@@ -1,8 +1,9 @@
 package ru.klkvsk.fenom.lexer;
 
-import com.intellij.lexer.LexerBase;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.util.containers.Stack;
+import consulo.language.ast.IElementType;
+import consulo.language.lexer.LexerBase;
+import consulo.util.collection.Stack;
+
 import static ru.klkvsk.fenom.psi.FenomTypes.*;
 
 %%

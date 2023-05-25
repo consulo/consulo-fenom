@@ -1,9 +1,9 @@
 package ru.klkvsk.fenom.lexer;
 
-import com.intellij.lexer.Lexer;
-import com.intellij.lexer.LookAheadLexer;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.TokenSet;
+import consulo.language.lexer.Lexer;
+import consulo.language.ast.IElementType;
+import consulo.language.ast.TokenSet;
+import consulo.language.lexer.LookAheadLexer;
 
 /**
  * Uses base-lexer to get big chunks, and several of them (typesToLex) are then lexed into smaller tokens using sub-lexer.

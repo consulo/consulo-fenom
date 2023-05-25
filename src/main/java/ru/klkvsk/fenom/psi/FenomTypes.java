@@ -1,11 +1,11 @@
 // This is a generated file. Not intended for manual editing.
 package ru.klkvsk.fenom.psi;
 
-import com.intellij.psi.TokenType;
-import com.intellij.psi.templateLanguages.TemplateDataElementType;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.IFileElementType;
-import com.intellij.psi.tree.TokenSet;
+import consulo.language.ast.IFileElementType;
+import consulo.language.ast.TokenType;
+import consulo.language.impl.psi.template.TemplateDataElementType;
+import consulo.language.ast.IElementType;
+import consulo.language.ast.TokenSet;
 import ru.klkvsk.fenom.FenomLanguage;
 
 public interface FenomTypes
