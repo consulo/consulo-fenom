@@ -6,6 +6,7 @@ import consulo.colorScheme.setting.AttributesDescriptor;
 import consulo.colorScheme.setting.ColorDescriptor;
 import consulo.language.editor.colorScheme.setting.ColorSettingsPage;
 import consulo.language.editor.highlight.SyntaxHighlighter;
+import consulo.localize.LocalizeValue;
 import jakarta.annotation.Nonnull;
 
 import java.util.Map;
@@ -25,9 +26,9 @@ public class FenomColorSettingsPage implements ColorSettingsPage
 
 	@Nonnull
 	@Override
-	public String getDisplayName()
+	public LocalizeValue getDisplayName()
 	{
-		return "Fenom";
+		return LocalizeValue.localizeTODO("Fenom");
 	}
 
 	@Nonnull
@@ -35,13 +36,6 @@ public class FenomColorSettingsPage implements ColorSettingsPage
 	public AttributesDescriptor[] getAttributeDescriptors()
 	{
 		return ATTRS;
-	}
-
-	@Nonnull
-	@Override
-	public ColorDescriptor[] getColorDescriptors()
-	{
-		return new ColorDescriptor[0];
 	}
 
 	@Nonnull
@@ -56,11 +50,5 @@ public class FenomColorSettingsPage implements ColorSettingsPage
 	public String getDemoText()
 	{
 		return "{* Comment *}\n<h1>Welcome</h1>\n\n{if $user?}\n\t$user.name\n{/if}\n";
-	}
-
-	@Override
-	public Map<String, TextAttributesKey> getAdditionalHighlightingTagToDescriptorMap()
-	{
-		return null;
 	}
 }
