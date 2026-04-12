@@ -1,6 +1,7 @@
 package ru.klkvsk.fenom.editor;
 
 import consulo.colorScheme.EditorColorsScheme;
+import consulo.html.language.HtmlFileType;
 import consulo.language.Language;
 import consulo.language.editor.highlight.LayerDescriptor;
 import consulo.language.editor.highlight.LayeredLexerEditorHighlighter;
@@ -11,7 +12,6 @@ import consulo.language.template.TemplateDataLanguageMappings;
 import consulo.project.Project;
 import consulo.virtualFileSystem.VirtualFile;
 import consulo.virtualFileSystem.fileType.FileType;
-import consulo.xml.ide.highlighter.HtmlFileType;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import ru.klkvsk.fenom.psi.FenomTypes;

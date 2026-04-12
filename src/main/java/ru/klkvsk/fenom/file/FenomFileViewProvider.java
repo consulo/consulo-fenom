@@ -1,5 +1,6 @@
 package ru.klkvsk.fenom.file;
 
+import consulo.html.language.HTMLLanguage;
 import consulo.language.Language;
 import consulo.language.impl.file.MultiplePsiFilesPerDocumentFileViewProvider;
 import consulo.language.impl.psi.PsiFileImpl;
@@ -12,7 +13,6 @@ import consulo.language.template.TemplateDataLanguageMappings;
 import consulo.language.template.TemplateLanguage;
 import consulo.language.template.TemplateLanguageFileViewProvider;
 import consulo.virtualFileSystem.VirtualFile;
-import consulo.xml.lang.html.HTMLLanguage;
 import ru.klkvsk.fenom.FenomLanguage;
 import ru.klkvsk.fenom.psi.FenomTypes;
 
